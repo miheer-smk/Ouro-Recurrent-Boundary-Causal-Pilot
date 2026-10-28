@@ -14,7 +14,7 @@ The final bundle is deliberately **not** a second copy of the entire multi-GB Ou
 | DGX evaluator v2 | `results/dgx_validation/dgx_source_snapshot/ouro_dgx_fp32_primary_panel_v2.py` | `8e1f4fa592c1a514632597032d6423b710159314ee1e7f345743a5090ffab69f` | PASS |
 | DGX primary NPZ | `results/dgx_validation/dgx_source_snapshot/fp32_robustness/fp32_primary_full_v2.npz` | `3e2812f46e492d02619e72fd21ff77c5ff92dfd4daf7091f1a9fb1733d9c68a3` | PASS |
 
-User saved an integrity report at `results/dgx_validation/final_closeout/critical_file_integrity_v1.json`. That local report is not included in this package because it was not uploaded; status values above are based on the user's provided PowerShell output. It should remain preserved and is checked again by `scripts/verify_windows_sources.ps1`.
+User saved an integrity report at `results/dgx_validation/final_closeout/critical_file_integrity_v1.json`. That local report is not included in this package because it was not uploaded; status values above are based on the user's provided PowerShell output. It should remain preserved in the original Windows project. The seven-source integrity verification was performed separately; this repository rechecks the two included raw NPZ files using `scripts/verify_artifacts.py`.
 
 ## Additional expected original inputs
 
@@ -34,4 +34,4 @@ Astra received a 13-file numerical audit package that omitted the original evalu
 
 ## Tamper-evident package manifest
 
-`BUNDLE_SHA256_MANIFEST.txt` lists exact relative SHA-256 hashes for the files in this bundle. It verifies these packaged copies, not all files in the user's original project or the DGX evidence snapshot.
+`SHA256_MANIFEST.txt` records SHA-256 hashes for the repository files except the manifest itself. It does not verify external source files in the original Windows project or the complete DGX evidence snapshot.
