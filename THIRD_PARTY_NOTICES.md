@@ -9,3 +9,10 @@ The repository's **original code, diagrams, text, and generated plots** are offe
 * **Independent AI-assisted review:** the Astra assessment is labeled AI-assisted independent analysis, not formal journal peer review.
 
 Before switching repository visibility from private to public, inspect every tracked file and confirm the licensing and authorship of any externally contributed components.
+
+## Verified upstream licenses
+
+- **Ouro-1.4B:** The upstream [ByteDance model card](https://huggingface.co/ByteDance/Ouro-1.4B) identifies the model license as Apache-2.0.
+- **SciQ:** The upstream [AllenAI dataset card](https://huggingface.co/datasets/allenai/sciq) identifies the dataset license as Creative Commons Attribution-NonCommercial 3.0 (CC BY-NC 3.0).
+
+These upstream terms are separate from this repository's MIT license. This repository does not redistribute the original model weights or SciQ question text. The licensing status of research-derived numerical outputs should not be inferred solely from the absence of original text.

@@ -58,17 +58,17 @@ flowchart LR
 
 Let `m(+αv, b)` and `m(−αv, b)` denote the correct-minus-fixed-incorrect first-continuation-token logit margins after patching the final prompt-token state at boundary `b` and running exactly one additional recurrent pass:
 
-\[
+$$
 S(v,b,\alpha)=\frac{m(+\alpha v,b)-m(-\alpha v,b)}{2\alpha},
 \qquad D(v,\alpha)=S(v,3,\alpha)-S(v,2,\alpha).
-\]
+$$
 
 For frozen question `q` and direction `j` with 16 matched controls `cₖ(q,j)`:
 
-\[
+$$
 P_{qj}(\alpha)=D(v_j,\alpha)-\frac{1}{16}\sum_{k=1}^{16}D(c_k(q,j),\alpha),
 \qquad T_j(\alpha)=\frac{1}{30}\sum_{q=1}^{30}P_{qj}(\alpha).
-\]
+$$
 
 A negative `T` means the direction's *boundary-3-minus-boundary-2 finite-amplitude response* is more negative than the mean matched-control response. It is **not** evidence that the direction improves question-answering accuracy, mediates reasoning, or represents a known semantic concept. See [methodology](docs/scientific_closeout.md) and [architecture notes](docs/architecture.md).
 
