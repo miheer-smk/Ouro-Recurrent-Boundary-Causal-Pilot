@@ -1,0 +1,8 @@
+flowchart LR
+  A["Frozen prompt tokens"] --> B["Token embedding"]
+  B --> C["Shared Ouro decoder-layer stack"]
+  C --> D["RMSNorm after recurrent step"]
+  D --> E["Select hidden state at fixed step"]
+  E --> F["LM head: token logits"]
+  D -- "Next recurrent step; layers reused" --> C
+  D -. "Early-exit gate computed; not selected here" .-> G["Early-exit gate"]

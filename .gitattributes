@@ -1,0 +1,16 @@
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.svg text eol=lf -whitespace
+*.mmd text eol=lf
+*.yml text eol=lf
+*.cff text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.npz -text
+*.png -text
+results/reports/windows_fp16_original_v1.json -text -whitespace
+docs/scientific_closeout.md -whitespace

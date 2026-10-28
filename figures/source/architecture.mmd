@@ -1,0 +1,9 @@
+flowchart LR
+  A["Frozen SciQ prompt"] --> B["Ouro-1.4B recurrent computation"]
+  B --> C{"Boundary 2 or 3"}
+  C --> D["Post-norm full-sequence state"]
+  V["Frozen SAE direction / 16 controls"] --> E["Patch last prompt-token: +αv or −αv"]
+  D --> E
+  E --> F["Exactly one additional recurrent iteration"]
+  F --> G["LM head: gold minus wrong token margin"]
+  G --> H["Centered sensitivity S; boundary difference D; paired contrast T"]

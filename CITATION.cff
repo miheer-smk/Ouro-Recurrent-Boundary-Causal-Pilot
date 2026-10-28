@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, please cite the repository."
+title: "Causal Probing of Recurrent Computation in Ouro-1.4B: An SAE-Derived Loop-Boundary Intervention and Numerical Robustness Study"
+version: 1.0.0
+abstract: "Completed exploratory pilot with numerical robustness assessment; not a validated mechanistic discovery."
+authors:
+  - family-names: Kulkarni
+    given-names: Miheer
+repository-code: "https://github.com/miheer-smk/ouro-recurrent-boundary-causal-pilot"
+license: MIT
+keywords:
+  - mechanistic interpretability
+  - sparse autoencoders
+  - recurrent transformers
+  - causal interventions

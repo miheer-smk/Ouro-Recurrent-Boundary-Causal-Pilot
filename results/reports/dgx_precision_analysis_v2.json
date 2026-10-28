@@ -1,0 +1,187 @@
+{
+  "all_four_95pct_CIs_wholly_inside_proposed_band": false,
+  "alpha": 0.08,
+  "band_is_new_post_pilot_proposal": true,
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 20261030,
+  "candidate_directions": {
+    "seed123_feature2437": {
+      "archived_windows_fp16_T": -0.039126078287760414,
+      "comparisons": {
+        "dgx_fp32_intended": {
+          "bootstrap_95pct_CI": [
+            -0.023310497713585693,
+            0.019344535190612064
+          ],
+          "bootstrap_98p75pct_CI_4_comparison_familywise": [
+            -0.02946404014558842,
+            0.024659472944525467
+          ],
+          "directional_sign_changes_nonzero": 8,
+          "inside_band_at_98p75pct": false,
+          "inside_proposed_band_at_95pct": false,
+          "max_abs_per_question": 0.1248873770236969,
+          "mean_paired_T_discrepancy": -0.0018213503062725067,
+          "per_question_RMS_discrepancy": 0.06024033555408008
+        },
+        "dgx_fp32_realized": {
+          "bootstrap_95pct_CI": [
+            -0.02342615074788531,
+            0.01966390293091534
+          ],
+          "bootstrap_98p75pct_CI_4_comparison_familywise": [
+            -0.029538901600365836,
+            0.02493621424461409
+          ],
+          "directional_sign_changes_nonzero": 9,
+          "inside_band_at_98p75pct": false,
+          "inside_proposed_band_at_95pct": false,
+          "max_abs_per_question": 0.13102777302265167,
+          "mean_paired_T_discrepancy": -0.0016842285792032878,
+          "per_question_RMS_discrepancy": 0.0607250773777641
+        }
+      },
+      "dgx_fp16_minus_archived_windows_fp16_T": 0.007343292236328125,
+      "dgx_fp16_vs_archived_windows_fp16_RMS_question_effect": 0.06630137908577104,
+      "dgx_means_T": {
+        "dgx_fp16": -0.03178278605143229,
+        "dgx_fp32_intended": -0.033604136357704796,
+        "dgx_fp32_realized": -0.03346701463063558
+      }
+    },
+    "seed42_feature2913": {
+      "archived_windows_fp16_T": -0.03521919250488281,
+      "comparisons": {
+        "dgx_fp32_intended": {
+          "bootstrap_95pct_CI": [
+            -0.026580335417141516,
+            0.014791507429132829
+          ],
+          "bootstrap_98p75pct_CI_4_comparison_familywise": [
+            -0.03246389232420673,
+            0.01971396419685346
+          ],
+          "directional_sign_changes_nonzero": 9,
+          "inside_band_at_98p75pct": false,
+          "inside_proposed_band_at_95pct": false,
+          "max_abs_per_question": 0.14134757220745087,
+          "mean_paired_T_discrepancy": -0.005345270037651062,
+          "per_question_RMS_discrepancy": 0.05769002416960061
+        },
+        "dgx_fp32_realized": {
+          "bootstrap_95pct_CI": [
+            -0.027076086960732937,
+            0.014248735271394216
+          ],
+          "bootstrap_98p75pct_CI_4_comparison_familywise": [
+            -0.032937240825655564,
+            0.019078829092904964
+          ],
+          "directional_sign_changes_nonzero": 9,
+          "inside_band_at_98p75pct": false,
+          "inside_proposed_band_at_95pct": false,
+          "max_abs_per_question": 0.14194995164871216,
+          "mean_paired_T_discrepancy": -0.00580387810866038,
+          "per_question_RMS_discrepancy": 0.05754177419705397
+        }
+      },
+      "dgx_fp16_minus_archived_windows_fp16_T": 0.0015036265055338542,
+      "dgx_fp16_vs_archived_windows_fp16_RMS_question_effect": 0.0742775880452873,
+      "dgx_means_T": {
+        "dgx_fp16": -0.03371556599934896,
+        "dgx_fp32_intended": -0.03906083603700002,
+        "dgx_fp32_realized": -0.03951944410800934
+      }
+    }
+  },
+  "cross_hardware_archived_fp16_is_not_exact": true,
+  "identity": {
+    "alpha": 0.08,
+    "arms": [
+      "dgx_fp16",
+      "dgx_fp32_realized",
+      "dgx_fp32_intended"
+    ],
+    "base_states": "DGX FP16 complete-sequence states, captured separately at the exact intervention-chunk batch sizes",
+    "batch_size": 8,
+    "bootstrap": {
+      "draws": 20000,
+      "sampling_unit": "frozen question",
+      "seed": 20261030
+    },
+    "boundaries": [
+      2,
+      3
+    ],
+    "comparison_band_T_units": [
+      -0.005,
+      0.005
+    ],
+    "comparison_band_origin": "Astra-proposed numerical criterion; NOT original pilot preregistration",
+    "controls_per_direction": 16,
+    "cross_hardware_exact_reproduction": false,
+    "cuda_version": "13.0",
+    "directions": [
+      "seed42_feature2913",
+      "seed123_feature2437"
+    ],
+    "fp32_weights": "copy.deepcopy of DGX-loaded FP16 model, then float() conversion",
+    "gpu": "NVIDIA GB10",
+    "hashes": {
+      "baseline": "824d09c1addcdae7ac0d7dd567132e7ea77e7bf9e9b47ace2091456c81d1fb54",
+      "contrasts": "b0a2412b736c25e69826e110d067c043f572517eaeb0e11cb37ee96a699fd1cd",
+      "controls": "0ecaf8237652307ab727dcca97b79e04902c2025584c4f778f2cbefad040f3cc",
+      "dataset": "656cdf16f40617360683b039b8c2a2b48b479be06d1df5c8b023afbb648da9bd",
+      "model_source": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+      "model_weights": "58872a72616c736595b8b7662079c5b12c5a162ec16eae94f21c348dfa9885af",
+      "original_evaluator": "a7872dabcfbdaac54dd3082e82da25b1ed98f7f4fac34b838efb0d8e67e77693",
+      "original_npz": "2218aac6b7222f426b34e8427c25160c99e5ada151393fcdaec23abbc642b2ed"
+    },
+    "platform": "aarch64",
+    "protocol": "ouro_dgx_fp32_primary_panel_v2",
+    "python": "3.12.3",
+    "row_ids": [
+      "sciq-validation-row-0544",
+      "sciq-validation-row-0117",
+      "sciq-validation-row-0529",
+      "sciq-validation-row-0170",
+      "sciq-validation-row-0487",
+      "sciq-validation-row-0446",
+      "sciq-validation-row-0431",
+      "sciq-validation-row-0728",
+      "sciq-validation-row-0194",
+      "sciq-validation-row-0590",
+      "sciq-validation-row-0365",
+      "sciq-validation-row-0377",
+      "sciq-validation-row-0351",
+      "sciq-validation-row-0808",
+      "sciq-validation-row-0195",
+      "sciq-validation-row-0015",
+      "sciq-validation-row-0239",
+      "sciq-validation-row-0321",
+      "sciq-validation-row-0447",
+      "sciq-validation-row-0815",
+      "sciq-validation-row-0486",
+      "sciq-validation-row-0278",
+      "sciq-validation-row-0975",
+      "sciq-validation-row-0776",
+      "sciq-validation-row-0064",
+      "sciq-validation-row-0014",
+      "sciq-validation-row-0639",
+      "sciq-validation-row-0996",
+      "sciq-validation-row-0063",
+      "sciq-validation-row-0775"
+    ],
+    "script_sha256": "8e1f4fa592c1a514632597032d6423b710159314ee1e7f345743a5090ffab69f",
+    "torch_version": "2.10.0a0+b558c986e8.nv25.11"
+  },
+  "proposed_equivalence_band_T_units": [
+    -0.005,
+    0.005
+  ],
+  "raw_npz_sha256": "3e2812f46e492d02619e72fd21ff77c5ff92dfd4daf7091f1a9fb1733d9c68a3",
+  "scientific_interpretation": "New DGX hardware numerical assessment only; does not certify original Windows pilot or independent replication.",
+  "scope": "frozen 30-question primary-alpha DGX robustness",
+  "status": "COMPLETE_NUMERICAL_EQUIVALENCE_NOT_MET",
+  "total_elapsed_seconds": 269.28758096694946
+}

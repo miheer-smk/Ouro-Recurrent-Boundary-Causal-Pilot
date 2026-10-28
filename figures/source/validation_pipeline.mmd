@@ -1,0 +1,12 @@
+flowchart TD
+  A["Windows FP16 frozen experiment"] --> B["Archived raw margins and effects"]
+  C["DGX FP16 frozen boundary states"] --> D["DGX FP16 native: exact local hook/split parity"]
+  C --> E["DGX FP32 continuation: realized endpoint"]
+  C --> F["DGX FP32 continuation: intended endpoint"]
+  D --> G["30-question paired effect comparison"]
+  E --> G
+  F --> G
+  B --> G
+  G --> H["Bootstrap + Bonferroni intervals"]
+  H --> I["Equivalence ±0.005 NOT established"]
+  I --> J["Qualified pilot closeout; no mechanism claim"]
